@@ -1,10 +1,16 @@
-﻿namespace PWN {
+﻿using System.Xml.Linq;
+
+namespace PWN {
     internal class Program {
         static void Main(string[] args)
-        {
-            ToneToFrequency toneToFrequency = new ToneToFrequency();
-            int freq = toneToFrequency.GetFrequency("G", 3);
-            Console.WriteLine($"The tone has frequency {freq}");
+        { 
+           
+            Klaver klaver = new Klaver();
+            Sangbog sangbog = new Sangbog();
+
+            //klaver.playsong(sangbog.SeDenLilleKat(), "Se den lille katte killing");
+            klaver.playsong(sangbog.AintNoSunshine(), "aint no sunshine");    
+            
         }
     }
 }
